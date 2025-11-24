@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar UI</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+
+    <header class="header">
+	<div class="header__logo">
+		<img src="logo.png" alt="Logo">
+	</div>
+
+	<div class="header__wrapper">
+		<div class="header__navigation-wrapper">
+			<ul class="header__list">
+				<li class="header__list-item"><a href="#">Home</a></li>
+
+				<li class="header__list-item has-submenu">
+					<a href="#">Sports</a>
+					<div class="submenu-wrapper">
+						<!-- submenu content here (optional) -->
+					</div>
+				</li>
+
+				<li class="header__list-item has-submenu">
+					<a href="#">Events</a>
+					<div class="submenu-wrapper">
+						<!-- submenu content here (optional) -->
+					</div>
+				</li>
+
+				<li class="header__list-item"><a href="#">Shop</a></li>
+				<li class="header__list-item"><a href="#">Community</a></li>
+				<li class="header__list-item"><a href="#">Contact</a></li>
+			</ul>
+
+			<div class="header__buttons-wrapper">
+				<a href="#" class="header__button">Get a Demo</a>
+				<a href="#" class="header__button">Join a Sport</a>
+			</div>
+		</div>
+
+		<!-- BURGER BUTTON -->
+		<div class="header__burger">
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+	</div>
+</header>
+
+
+
+
+    <!-- NAVBAR START -->
+    <nav class="nav-bar">
+        <div class="nav-left">
+            <div class="logo"><span class="blue">▶</span>bato.</div>
+            <ul class="nav-menu">
+                <li>Sports <span>▼</span></li>
+                <li>Events <span>▼</span></li>
+                <li>Shop</li>
+                <li>Community</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <a href="#" class="nav-btn">Get a Demo →</a>
+            <a href="#" class="nav-btn active">Join a Sport →</a>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+    </nav>
+    <!-- NAVBAR END -->
+<script>
+    function toggleMenu() {
+    document.querySelector(".nav-menu").classList.toggle("mobile-show");
+    document.querySelector(".nav-right").classList.toggle("mobile-show");
+}
+
+</script>
+
+<!-- new navbar -->
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const burger = document.querySelector(".header__burger");
+	const navWrapper = document.querySelector(".header__navigation-wrapper");
+
+	if (burger && navWrapper) {
+		burger.addEventListener("click", () => {
+			burger.classList.toggle("active");
+			navWrapper.classList.toggle("open");
+		});
+	}
+});
+
+</script>
+</body>
+</html>
