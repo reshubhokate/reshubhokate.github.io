@@ -1,0 +1,525 @@
+/* ---------- PAGE BACKGROUND ---------- */
+/* body {
+    margin: 0;
+    padding: 0;
+    background-color: #0AC385;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%230AC385' width='11' height='11'/%3E%3Crect fill='%231cc487' x='10' width='11' height='11'/%3E%3Crect fill='%2327c588' y='10' width='11' height='11'/%3E%3Crect fill='%2330c68a' x='20' width='11' height='11'/%3E%3Crect fill='%2338c78b' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%233ec88d' y='20' width='11' height='11'/%3E%3Crect fill='%2344c98f' x='30' width='11' height='11'/%3E%3Crect fill='%234aca90' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%234fcc92' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%2354cd93' y='30' width='11' height='11'/%3E%3Crect fill='%2359ce95' x='40' width='11' height='11'/%3E%3Crect fill='%235ecf97' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%2362d099' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%2367d19a' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%236bd29c' y='40' width='11' height='11'/%3E%3Crect fill='%236fd39e' x='50' width='11' height='11'/%3E%3Crect fill='%2373d4a0' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%2377d5a1' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%237bd6a3' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%237ed7a5' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%2382d8a7' y='50' width='11' height='11'/%3E%3Crect fill='%2385d9a9' x='60' width='11' height='11'/%3E%3Crect fill='%2389daaa' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%238ddbac' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%2390dcae' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%2393ddb0' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%2397deb2' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%239adfb4' x='70' width='11' height='11'/%3E%3Crect fill='%239de0b6' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23a1e1b8' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23a4e2ba' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23a7e3bc' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23aae4be' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23ade5c0' x='80' width='11' height='11'/%3E%3Crect fill='%23b0e6c2' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23b4e7c4' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23b7e8c6' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23bae9c8' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23bdeaca' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23c0ebcc' x='90' width='11' height='11'/%3E%3Crect fill='%23c3ecce' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23c6edd0' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23c8eed3' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23cbefd5' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23cef0d7' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23d1f1d9' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23d4f2db' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23d7f3dd' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23daf4e0' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23ddf5e2' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23dff6e4' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23e2f7e6' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23e5f8e9' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23e8f9eb' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23eafaed' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23edfbf0' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23f0fcf2' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23f3fdf4' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23f5fef7' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23F8FFF9' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+} */
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #0AC385;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%230AC385' width='11' height='11'/%3E%3Crect fill='%231cc487' x='10' width='11' height='11'/%3E%3Crect fill='%2327c588' y='10' width='11' height='11'/%3E%3Crect fill='%2330c68a' x='20' width='11' height='11'/%3E%3Crect fill='%2338c78b' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%233ec88d' y='20' width='11' height='11'/%3E%3Crect fill='%2344c98f' x='30' width='11' height='11'/%3E%3Crect fill='%234aca90' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%234fcc92' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%2354cd93' y='30' width='11' height='11'/%3E%3Crect fill='%2359ce95' x='40' width='11' height='11'/%3E%3Crect fill='%235ecf97' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%2362d099' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%2367d19a' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%236bd29c' y='40' width='11' height='11'/%3E%3Crect fill='%236fd39e' x='50' width='11' height='11'/%3E%3Crect fill='%2373d4a0' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%2377d5a1' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%237bd6a3' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%237ed7a5' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%2382d8a7' y='50' width='11' height='11'/%3E%3Crect fill='%2385d9a9' x='60' width='11' height='11'/%3E%3Crect fill='%2389daaa' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%238ddbac' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%2390dcae' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%2393ddb0' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%2397deb2' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%239adfb4' x='70' width='11' height='11'/%3E%3Crect fill='%239de0b6' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23a1e1b8' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23a4e2ba' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23a7e3bc' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23aae4be' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23ade5c0' x='80' width='11' height='11'/%3E%3Crect fill='%23b0e6c2' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23b4e7c4' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23b7e8c6' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23bae9c8' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23bdeaca' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23c0ebcc' x='90' width='11' height='11'/%3E%3Crect fill='%23c3ecce' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23c6edd0' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23c8eed3' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23cbefd5' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23cef0d7' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23d1f1d9' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23d4f2db' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23d7f3dd' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23daf4e0' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23ddf5e2' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23dff6e4' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23e2f7e6' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23e5f8e9' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23e8f9eb' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23eafaed' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23edfbf0' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23f0fcf2' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23f3fdf4' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23f5fef7' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23F8FFF9' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* ---------- NAVBAR MAIN ---------- */
+.header {
+	display: flex;
+	align-items: center;
+	padding: 0 20px 0 40px;
+	border-radius: 60px;
+	min-height: 82px;
+	background-color: #fff;
+	margin: 20px auto;
+	width: 85%;
+	box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+
+.header__logo img {
+	max-width: 68px;
+}
+
+/* container */
+.header__wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/* menu & buttons wrapper */
+.header__navigation-wrapper {
+	display: flex;
+	width: 100%;
+	padding-left: 50px;
+	align-items: center;
+}
+
+/* menu list */
+.header__list {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* list item */
+.header__list-item {
+	position: relative;
+	font-size: 16px;
+}
+
+.header__list-item > a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: #000;
+	font-weight: 500;
+	padding: 20px 0;
+	transition: .3s;
+}
+
+.header__list-item > a:hover {
+	color: #0AC385;
+}
+
+/* ---------- BUTTONS ---------- */
+.header__buttons-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-left: auto;
+}
+
+.header__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 42px;
+	padding: 6px 20px;
+	border-radius: 100px;
+	font-size: 15px;
+	border: 1px solid #0AC385;
+	background: #0AC385;
+	color: #fff;
+	transition: .3s;
+}
+
+.header__button.outline {
+	background: transparent;
+	color: #0AC385;
+}
+
+.header__button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ---------- SUBMENU ---------- */
+.submenu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #fff;
+	min-width: 160px;
+	padding: 10px 0;
+	border-radius: 8px;
+	box-shadow: 0 9px 25px rgba(0,0,0,0.15);
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+	list-style: none;
+	z-index: 55;
+}
+
+.submenu li a {
+	display: block;
+	padding: 10px 15px;
+	color: #000;
+	font-size: 14px;
+	transition: .2s;
+}
+
+.submenu li a:hover {
+	background: #0AC385;
+	color: #fff;
+}
+
+.has-submenu:hover .submenu {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* ---------- BURGER ---------- */
+.header__burger {
+	display: none;
+	flex-direction: column;
+	gap: 4px;
+	width: 24px;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.header__burger i {
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	border-radius: 13px;
+	transition: .4s;
+}
+
+/* active burger (X close) */
+.header__burger.active i:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.header__burger.active i:nth-child(2) { opacity: 0; }
+.header__burger.active i:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+	.header {
+		min-height: 64px;
+		padding: 0 20px;
+	}
+
+	.header__burger { display: flex; }
+
+	.header__navigation-wrapper {
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		top: 110%;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		border-radius: 20px;
+		background-color: #fff;
+		opacity: 0;
+		visibility: hidden;
+		transition: .4s;
+		box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+	}
+
+	.header__navigation-wrapper.open {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.header__list {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.submenu {
+		position: static;
+		box-shadow: none;
+		opacity: 1;
+		visibility: visible;
+		padding: 5px 0 0;
+		width: 100%;
+	}
+	.submenu li a { padding: 8px 0; }
+
+	.header__buttons-wrapper {
+		flex-direction: column;
+		margin-top: 25px;
+		width: 100%;
+	}
+	.header_button, .header_button.outline {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/* ===================== HERO SECTION ===================== */
+
+.home-hero {
+    width: 100%;
+    padding: 100px 0 80px;
+    background: linear-gradient(135deg, #ffffff, #e8fff3);
+}
+
+.hero-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 580px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #004d2b;
+    line-height: 56px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 17px;
+    color: #3c6e58;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #0AC385;
+    transition: .3s;
+}
+
+.hero-btn.demo {
+    background: #0AC385;
+    color: #fff;
+}
+
+.hero-btn.outline {
+    background: transparent;
+    color: #0AC385;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.hero-image img {
+    width: 420px;
+    animation: float 3.5s infinite ease-in-out;
+}
+
+/* Floating Chatbot Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .hero-image img {
+        width: 300px;
+        margin-top: 25px;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+
+
+/* =================== SERVICES SECTION =================== */
+
+.services-section {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #F8FFF9;
+}
+
+.services-container {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #004d2b;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #3c6e58;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 18px;
+    width: 300px;
+    padding: 28px 20px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.service-card img {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #0AC385;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.service-link {
+    font-weight: bold;
+    color: #0AC385;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.service-link:hover {
+    color: #004d2b;
+}
+
+/* Hover animation */
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* ===================START FOOTER =================== */
+
+.main-footer {
+    background: linear-gradient(135deg, #0AC385, #47D29F);
+    padding: 50px 0 10px;
+    color: #fff;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+.footer-logo {
+    width: 75px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #eefdf2;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.footer-col ul li a:hover {
+    color: #004d2b;
+    font-weight: 600;
+}
+
+/* bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px 0 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #004d2b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+    }
+    .footer-logo {
+        margin: 0 auto 15px;
+    }
+}
+/* ===================START FOOTER =================== */
+
+
+
+.hero-image {
+    width: 420px;
+    cursor: pointer;
+}
+
+.hero-image svg {
+    width: 100%;
+    height: auto;
+}
+
+/* slide section */
+
+

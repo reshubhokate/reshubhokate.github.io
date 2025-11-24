@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+<link rel="stylesheet" href="test.css" type="text/css" />
+</head>
+<body>
+
+<header class="header">
+    <div class="header__logo">
+        <img src="/logo/logo.webp" alt="Logo">
+    </div>
+
+    <div class="header__wrapper">
+        <div class="header__navigation-wrapper">
+            <ul class="header__list">
+
+    <li class="header__list-item"><a href="#">Home</a></li>
+
+    <li class="header__list-item"><a href="#">About_Us</a></li>
+
+    <li class="header__list-item has-submenu">
+        <a href="#">Solutions</a>
+        <ul class="submenu">
+            <li><a href="#">Feature 1</a></li>
+            <li><a href="#">Feature 2</a></li>
+            <li><a href="#">Feature 3</a></li>
+        </ul>
+    </li>
+
+    <li class="header__list-item has-submenu">
+        <a href="#">Integrations</a>
+        <ul class="submenu">
+            <li><a href="#">CRM Integration</a></li>
+            <li><a href="#">Payment Gateways</a></li>
+            <li><a href="#">3rd Party Apps</a></li>
+        </ul>
+    </li>
+
+    <li class="header__list-item"><a href="#">Pricing Plans</a></li>
+
+    
+
+</ul>
+
+            <div class="header__buttons-wrapper">
+                <a href="#" class="header__button">Get a Demo</a>
+                <a href="#" class="header__button outline">Talk to an Expert</a>
+            </div>
+        </div>
+
+        <div class="header__burger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+</header>
+
+<!-- ===================== HOME HERO SECTION ===================== -->
+<section class="home-hero">
+    <div class="hero-container">
+
+        <div class="hero-text">
+            <h1>Your Smart AI Chatbot & Automation Partner</h1>
+            <p>Automate customer support, lead generation, and business workflows using AI-powered chatbots integrated with WhatsApp, Website, Instagram, CRM & more.</p>
+            
+            <div class="hero-buttons">
+                <a href="#" class="hero-btn demo">Get a Demo</a>
+                <a href="#" class="hero-btn outline">Talk to an Expert</a>
+            </div>
+        </div>
+
+        <!-- <div class="hero-image">
+            <img src="https://cdn-icons-png.flaticon.com/512/6194/6194029.png" alt="Chatbot AI">
+        </div> -->
+
+        <div class="hero-image" id="robot-container"></div>
+
+    </div>
+</section>
+<!-- ===================== END HOME HERO SECTION ===================== -->
+
+
+
+
+
+<!-- =================== SERVICES SECTION =================== -->
+<section class="services-section">
+    <div class="services-container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Smart automation solutions to scale your business faster.</p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Chatbot" />
+                <h3>AI Chatbot Development</h3>
+                <p>Custom AI chatbots for WhatsApp, Website, Instagram, and CRM workflows.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/9628/9628022.png" alt="Automation" />
+                <h3>Business Automation</h3>
+                <p>Reduce manual work using AI workflows for sales, support & operations.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3658/3658639.png" alt="Integration" />
+                <h3>App & CRM Integrations</h3>
+                <p>Connect chatbots with CRM, billing, payments, and 3rd-party tools.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =================== SERVICES END =================== -->
+
+
+
+
+<!-- =================== FOOTER START =================== -->
+<footer class="main-footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="/logo/logowithbg1.png" alt="Logo" class="footer-logo">
+            <p>Your trusted IT service partner specializing in Chatbot Automation & System Integrations.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+                <li><a href="#">Chatbot Automation</a></li>
+                <li><a href="#">AI Assistants</a></li>
+                <li><a href="#">CRM Integrations</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Get a Demo</a></li>
+                <li><a href="#">Talk to an Expert</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Texto. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> · <a href="#">Terms & Conditions</a></p>
+    </div>
+</footer>
+<!-- =================== FOOTER END ===================== -->
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+	const burger = document.querySelector(".header__burger");
+	const navWrapper = document.querySelector(".header__navigation-wrapper");
+
+	if (burger && navWrapper) {
+		burger.addEventListener("click", () => {
+			burger.classList.toggle("active");
+			navWrapper.classList.toggle("open");
+		});
+	}
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+<script>
+/* Hero Robot Animation */
+var robotAnim = lottie.loadAnimation({
+    container: document.getElementById('robot-container'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: "https://lottie.host/b868feea-e717-415b-8cf1-4ac089ee74ca/TltRQq3y0Y.json"  /* 3D Robot Animation */
+});
+
+/* On Hover Animation Speed Increase */
+const robotBox = document.getElementById('robot-container');
+
+robotBox.addEventListener('mouseover', () => {
+    robotAnim.setSpeed(2);  // faster on hover
+});
+robotBox.addEventListener('mouseout', () => {
+    robotAnim.setSpeed(1);  // normal speed
+});
+</script>
+
+</body>
+</html>

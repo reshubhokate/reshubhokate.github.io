@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatFlow Business | Do more with conversations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg-dark: #0b141a;
+      --bg-light: #ffffff;
+      --primary: #25d366;
+      --primary-soft: #e7f9ef;
+      --text-main: #111b21;
+      --text-muted: #54656f;
+      --border-soft: #d1d7db;
+      --radius-lg: 18px;
+      --radius-xl: 28px;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      color: var(--text-main);
+      background: #f0f2f5;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 20, 26, 0.95);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #67ffb6, #0b8f4d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .nav-title {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #e9edef;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      opacity: 0.8;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #0b141a;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #e9edef;
+      border: 1px solid rgba(233,237,239,0.4);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(233,237,239,0.08);
+    }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top left, #18252f 0, #05070a 55%, #050607 100%);
+      color: #fff;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 56px 20px 64px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #7aa7ff;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: #d1d7db;
+      max-width: 520px;
+      margin-bottom: 24px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .hero-badge {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #cfd4d8;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #25d366;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .hero-cta-note {
+      font-size: 13px;
+      color: #8696a0;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 18px;
+      font-size: 12px;
+      color: #8696a0;
+    }
+
+    .hero-trust strong {
+      color: #e9edef;
+      font-weight: 500;
+    }
+
+    /* Hero Right "Phone" Card */
+    .hero-phone-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .phone-card {
+      width: 280px;
+      border-radius: 32px;
+      padding: 18px 14px;
+      background: linear-gradient(160deg, #0f2027 0%, #203a43 45%, #2c5364 100%);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phone-notch {
+      width: 120px;
+      height: 18px;
+      border-radius: 0 0 16px 16px;
+      background: rgba(0,0,0,0.55);
+      margin: 0 auto 12px;
+    }
+
+    .phone-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #e9edef;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .phone-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #67ffb6, #0b8f4d);
+    }
+
+    .phone-body {
+      background: rgba(5,10,15,0.75);
+      border-radius: 20px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .bubble-row {
+      display: flex;
+      margin-top: 2px;
+    }
+
+    .bubble-row.me {
+      justify-content: flex-end;
+    }
+
+    .bubble {
+      max-width: 80%;
+      padding: 7px 9px;
+      border-radius: 14px;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .bubble.me {
+      background: #005c4b;
+      color: #e9edef;
+      border-bottom-right-radius: 3px;
+    }
+
+    .bubble.them {
+      background: #202c33;
+      color: #e9edef;
+      border-bottom-left-radius: 3px;
+    }
+
+    .bubble-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+      font-size: 9px;
+      opacity: 0.9;
+    }
+
+    .bubble-tag-pill {
+      background: rgba(11, 148, 81, 0.18);
+      border-radius: 999px;
+      padding: 3px 6px;
+    }
+
+    .bubble-tag-label {
+      color: #8696a0;
+    }
+
+    .phone-footer {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .phone-input {
+      flex: 1;
+      font-size: 11px;
+      padding: 7px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(4,10,15,0.8);
+      color: #cfd4d8;
+    }
+
+    .phone-send-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: none;
+      background: #25d366;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* SECTION WRAPPER */
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+
+    /* Products / Size Cards */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: var(--bg-light);
+      border-radius: var(--radius-xl);
+      padding: 22px 22px 20px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .product-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #008069;
+    }
+
+    .product-heading {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .product-text {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .product-link {
+      font-size: 14px;
+      color: #008069;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* Why Choose Us */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .why-card {
+      background: var(--bg-light);
+      border-radius: var(--radius-lg);
+      padding: 20px 20px 18px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .why-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .why-text {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Success Stories */
+    .success-band {
+      background: var(--primary-soft);
+      border-radius: 26px;
+      padding: 30px 26px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .success-kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #008069;
+      margin-bottom: 6px;
+    }
+
+    .success-title {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .success-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      max-width: 420px;
+    }
+
+    .success-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .success-tag-pill {
+      background: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      border: 1px solid #c0e6d1;
+    }
+
+    .success-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .metric-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 14px 14px 12px;
+      border: 1px solid #c0e6d1;
+    }
+
+    .metric-value {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #0b3d25;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      color: #3c5746;
+    }
+
+    /* CTA Section */
+    .cta-block {
+      text-align: center;
+      padding: 54px 20px 40px;
+    }
+
+    .cta-title {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .cta-text {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 20px;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid #d1d7db;
+      background: #f7f8fa;
+      padding: 20px 20px 26px;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 12px;
+      color: #54656f;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 42px;
+      }
+      .hero-phone-wrap {
+        order: -1;
+      }
+      .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .why-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .success-band {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-inner {
+        padding-inline: 14px;
+      }
+      .hero-inner {
+        padding-inline: 16px;
+      }
+      .section {
+        padding-inline: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo-circle">C</div>
+        <div class="nav-title">ChatFlow Business</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#why">Why ChatFlow</a>
+        <a href="#stories">Success Stories</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-ghost">Download App</button>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label">CONVERSATIONAL BUSINESS PLATFORM</div>
+        <h1 class="hero-title">Do more with conversations</h1>
+        <p class="hero-subtitle">
+          Engage audiences, accelerate sales, and support customers on the messaging channels
+          they already love — all from one smart automation platform.
+        </p>
+
+        <div class="hero-badges">
+          <span class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Verified business messaging
+          </span>
+          <span class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            No-code flows & APIs
+          </span>
+        </div>
+
+        <div class="hero-cta-row">
+          <button class="btn btn-primary">Start for free</button>
+          <button class="btn btn-ghost">Book a demo</button>
+        </div>
+        <p class="hero-cta-note">No credit card needed · Get live in days, not months</p>
+
+        <div class="hero-trust">
+          <div><strong>2B+</strong> people reachable on chat apps</div>
+          <div><strong>50M+</strong> messages automated each month</div>
+        </div>
+      </div>
+
+      <div class="hero-phone-wrap">
+        <div class="phone-card">
+          <div class="phone-notch"></div>
+          <div class="phone-header">
+            <div class="phone-header-left">
+              <div class="avatar"></div>
+              <span>GreenLeaf Store</span>
+            </div>
+            <span>online</span>
+          </div>
+          <div class="phone-body">
+            <div class="bubble-row them">
+              <div class="bubble them">
+                Hi! I'm interested in your weekend offer. Is it still available?
+              </div>
+            </div>
+            <div class="bubble-row me">
+              <div class="bubble me">
+                Absolutely! 🎉 Share your city & we'll send you personalized options.
+                <div class="bubble-tag">
+                  <span class="bubble-tag-pill">Smart reply</span>
+                  <span class="bubble-tag-label">Powered by ChatFlow</span>
+                </div>
+              </div>
+            </div>
+            <div class="bubble-row them">
+              <div class="bubble them">
+                Pune. Also, can I pay online?
+              </div>
+            </div>
+            <div class="bubble-row me">
+              <div class="bubble me">
+                Yes, you can pay via UPI or card. Here’s a secure payment link:
+                <div class="bubble-tag">
+                  <span class="bubble-tag-pill">Payment CTA</span>
+                  <span class="bubble-tag-label">Track clicks & conversions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-footer">
+            <input class="phone-input" placeholder="Type a message…" />
+            <button class="phone-send-btn">➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="section" id="products">
+    <h2 class="section-title">Chat automation for any business size</h2>
+    <p class="section-subtitle">
+      Whether you’re a solo founder or an enterprise team, choose the product that matches
+      how you talk to customers.
+    </p>
+
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-label">ChatFlow Platform</div>
+        <h3 class="product-heading">For growing teams and enterprises</h3>
+        <p class="product-text">
+          Connect your CRM, build automation journeys, and manage support at scale with
+          programmatic access and rich analytics.
+        </p>
+        <a href="#" class="product-link">Explore the platform →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-label">ChatFlow App</div>
+        <h3 class="product-heading">For small businesses</h3>
+        <p class="product-text">
+          Keep conversations personal with a simple app that organizes chats, quick replies,
+          labels, and reminders in one place.
+        </p>
+        <a href="#" class="product-link">Download the app →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section" id="why">
+    <h2 class="section-title">Why choose ChatFlow?</h2>
+    <p class="section-subtitle">
+      Build lasting customer relationships in the same place they talk to friends and family — with powerful tools behind every message.
+    </p>
+
+    <div class="why-grid">
+      <article class="why-card">
+        <h3 class="why-title">Meet customers where they already are</h3>
+        <p class="why-text">
+          Launch campaigns on chat, not cold email. Share product catalogs, offers, and updates on channels your customers open every day.
+        </p>
+      </article>
+      <article class="why-card">
+        <h3 class="why-title">Drive measurable business outcomes</h3>
+        <p class="why-text">
+          Turn each message into a conversion opportunity with buttons, quick replies, and integrated payment flows.
+        </p>
+      </article>
+      <article class="why-card">
+        <h3 class="why-title">Build long-term relationships</h3>
+        <p class="why-text">
+          Segment your audience, send tailored journeys, and keep customers engaged across onboarding, purchases, and support.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES STYLE BAND -->
+  <section class="section" id="stories">
+    <div class="success-band">
+      <div>
+        <div class="success-kicker">SUCCESS STORIES</div>
+        <h2 class="success-title">Brands across industries grow with ChatFlow</h2>
+        <p class="success-text">
+          From retail to education and logistics, businesses use ChatFlow to automate FAQs,
+          recover abandoned carts, and deliver instant support on chat.
+        </p>
+        <div class="success-tags">
+          <span class="success-tag-pill">E-commerce</span>
+          <span class="success-tag-pill">Fintech</span>
+          <span class="success-tag-pill">D2C brands</span>
+          <span class="success-tag-pill">Service businesses</span>
+        </div>
+      </div>
+      <div class="success-metrics">
+        <article class="metric-card">
+          <div class="metric-value">3.2×</div>
+          <div class="metric-label">higher campaign click-through on chat vs email</div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">45%</div>
+          <div class="metric-label">reduction in first-response time for support teams</div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">27%</div>
+          <div class="metric-label">average uplift in repeat orders within 60 days</div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">24/7</div>
+          <div class="metric-label">automation coverage using smart workflows</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="cta-block" id="contact">
+      <h2 class="cta-title">Ready to transform your customer conversations?</h2>
+      <p class="cta-text">
+        Launch in days with pre-built templates, no-code flows, and human-handover support.
+        Start small on a single channel and scale as you grow.
+      </p>
+      <button class="btn btn-primary">Talk to our team</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© 2025 ChatFlow Business</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+        <a href="#">Help Center</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

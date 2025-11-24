@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Animated Scroll Page</title>
+	<link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="test3.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- GSAP + ScrollTrigger CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- <header>
+	<label class="menu" for="burger">
+		<input id="burger" type="checkbox" />
+		<svg class="burger" viewBox="0 0 100 100" width="64">
+			<path class="line top"
+				d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272">
+			</path>
+			<path class="line middle"
+				d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272">
+			</path>
+			<path class="line bottom"
+				d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272">
+			</path>
+		</svg>
+	</label>
+
+	<nav>
+		<ul>
+			<li><a href="#masthead" title="masthead" style="--an: --masthead; --at: --masthead-s;">Home</a></li>
+			<li><a href="#tiles" title="tiles" style="--an: --tiles; --at: --tiles-s;">About Us</a></li>
+			<li><a href="#text" title="text" style="--an: --text; --at: --text-s;">Solutions</a></li>
+			<li><a href="#two-columns" title="two-columns" style="--an: --two-columns; --at: --two-columns-s;">Pricing</a></li>
+			<li><a href="#subscribe" title="subscribe" style="--an: --subscribe; --at: --subscribe-s;">Blogs</a></li>
+		</ul>
+	</nav>
+</header> -->
+
+<header>
+    <!-- LEFT LOGO -->
+    <a href="#" class="nav-logo">
+        <img src="/logo/logowithbg.webp" alt="Logo" />
+    </a>
+
+	<label class="menu" for="burger">
+		<input id="burger" type="checkbox" />
+		<svg class="burger" viewBox="0 0 100 100" width="64">
+			<path class="line top"
+				d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"></path>
+			<path class="line middle"
+				d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"></path>
+			<path class="line bottom"
+				d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"></path>
+		</svg>
+	</label>
+
+	<!-- CENTER NAV  -->
+	<nav>
+		<ul>
+			<li><a href="#masthead">Home</a></li>
+			<li><a href="#tiles">About Us</a></li>
+			<li><a href="#solution">Solutions</a></li>
+			<li><a href="#two-columns">Pricing</a></li>
+			<li><a href="#subscribe">Blogs</a></li>
+		</ul>
+	</nav>
+
+    <!-- RIGHT ACTION BUTTON -->
+    <div class="nav-btn">
+        <a href="#subscribe">Get Started</a>
+    </div>
+</header>
+
+
+<main>
+	<section id="masthead" style="--name: --masthead-s;">
+		<!-- <div class="flying-squares">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</div> -->
+		<div class="chat-bubbles">
+    <div class="bubble bubble--left">Chatboat Integration 👋</div>
+    <div class="bubble bubble--right">WhatsApp Business API</div>
+    <div class="bubble bubble--left">CRM Integration</div>
+	<div class="bubble bubble--right">Automation Workflows</div>
+  </div>
+		<div class="masthead">
+			<h1>TEXTO</h1>
+			<p>Press on the heart if you are also a CSS Developer 😃.</p>
+		</div>
+	</section>
+
+	
+	
+
+
+	<!-- <section id="tiles" style="--name: --tiles-s;">
+		<div class="tile-section">
+			<div class="tile-container">
+				<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+				<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+				<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+				<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+			</div>
+		</div>
+	</section> -->
+
+    <section id="tiles" style="--name: --tiles-s;">
+	
+	<!-- 👇 NEW About Intro -->
+
+
+	<div class="tile-section">
+        	<div class="about-intro about-animate">
+		<a href="about.html" class="about-link">
+			<span>Discover who we are</span>
+		</a>
+        <p class="about-short">
+		We help businesses communicate smarter with intelligent WhatsApp automation,
+		building meaningful and personalized customer relationships at scale.
+	</p>
+    <p class="about-mini">
+	A future-ready platform crafted to boost engagement, sales & customer happiness.
+</p>
+
+	</div>
+
+<!-- CARDS  -->
+    
+		<div class="tile-container">
+			<!-- your 20 tiles remain same -->
+			<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+			<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+			<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+			<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+		</div>
+	</div>
+
+</section>
+
+
+	<section id="text" style="--name: --text-s;">
+		<div class="read"><div>Reading progress</div></div>
+		<!-- <div class="text">
+			<h2>Smooth appearance of text when scrolling</h2>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+		</div> -->
+	</section>
+
+
+    <!-- start card slide up -->
+
+    <!-- <div class="l-cards"> -->
+
+    <section id="solution">
+        
+        <div class="l-cards">
+  <!-- CARD 1 -->
+  <div class="c-card">
+    <div class="c-card__description">
+      <div class="c-card__tagline">
+        Connect Smarter. Scale Faster.
+      </div>
+      
+      <h1 class="c-card__title">
+        WhatsApp Business API
+      </h1>
+      
+      <div class="c-card__excerpt">
+        Leverage the official WhatsApp Business API to connect with customers at scale. Send notifications, provide support, and build meaningful conversations.
+
+
+      </div>
+      
+      <div class="c-card__cta">
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+    </div>
+
+    <figure class="c-card__figure">
+      <img src="/images/2.png" alt="API">
+    </figure>
+  </div>
+  
+  <!-- CARD 2 -->
+  <div class="c-card">
+    <div class="c-card__description">
+      <div class="c-card__tagline">
+        Where AI Meets Real-Time Assistance
+      </div>
+      
+      <h1 class="c-card__title">
+        Intelligent Chatbots
+      </h1>
+      
+      <div class="c-card__excerpt">
+        Deploy AI-powered chatbots that understand context, handle complex queries, and provide instant responses 24/7.
+      </div>
+      
+      <div class="c-card__cta">
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+    </div>
+
+    <figure class="c-card__figure">
+      <img src="/images/chatboat1.png" alt="chatboat">
+    </figure>
+  </div>
+  
+  <!-- CARD 3 -->
+  <div class="c-card">
+    <div class="c-card__description">
+      <div class="c-card__tagline">
+        Integrations That Scale With You.
+      </div>
+      
+      <h1 class="c-card__title">
+        CRM Integration
+      </h1>
+      
+      <div class="c-card__excerpt">
+        Seamlessly integrate with your existing CRM systems to centralize customer data and streamline workflows.
+      </div>
+      
+      <div class="c-card__cta">
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+    </div>
+
+    <figure class="c-card__figure">
+      <img src="#" alt="CRM INTEGRATION">
+    </figure>
+  </div>
+  
+  <!-- CARD 4 -->
+  <!-- <div class="c-card">
+    <div class="c-card__description">
+      <div class="c-card__tagline">
+        Amon The Sign
+      </div>
+      
+      <h1 class="c-card__title">
+        Vicente / Guitars
+      </h1>
+      
+      <div class="c-card__excerpt">
+        Vicente es el guitarrista de la banda de Darkwave española: Amon The sign
+      </div>
+      
+      <div class="c-card__cta">
+        <a href="https://www.youtube.com/watch?v=aqacOQpfbxc&ab_channel=AmonTheSign" target="_blank">Escuchar en Youtube</a>
+      </div>
+    </div>
+
+    <figure class="c-card__figure">
+      <img src="https://www.ats.hugo-salazar.com/wp-content/uploads/2023/04/vicente.jpeg" alt="Vicente Payá">
+    </figure>
+  </div>
+   -->
+   <!-- CARD 5 -->
+  <!-- <div class="c-card">
+    <div class="c-card__description">
+      <div class="c-card__tagline">
+        Amon The Sign
+      </div>
+      
+      <h1 class="c-card__title">
+        Leoben Conoy / Synths
+      </h1>
+      
+      <div class="c-card__excerpt">
+        Leoben Conoy es el teclista de la banda de Darkwave española: Amon The sign
+      </div>
+      
+      <div class="c-card__cta">
+        <a href="https://www.youtube.com/watch?v=aqacOQpfbxc&ab_channel=AmonTheSign" target="_blank">Escuchar en Youtube</a>
+      </div>
+    </div>
+
+    <figure class="c-card__figure">
+      <img src="https://www.ats.hugo-salazar.com/wp-content/uploads/2023/04/leoben.jpeg" alt="Vicente Payá">
+    </figure>
+  </div>
+  
+</div> -->
+
+<!-- <div class="spacer"></div> -->
+<!-- </section> -->
+
+  <!-- </div> -->
+
+  <!-- <div class="spacer"></div> -->
+<!-- </section> -->
+
+<!-- cards end up -->
+
+
+
+
+	<section id="two-columns" style="--name: --two-columns-s;">
+		<div class="two-columns">
+			<h2>Picture arrived on the right</h2>
+			<div class="content">
+				<div class="cards">
+					<div class="card"><h3 class="title">Card title</h3><div class="subtitle">Subtitle</div><p>Lorem ipsum dolor...</p></div>
+					<div class="card"><h3 class="title">Card title</h3><div class="subtitle">Subtitle</div><p>Lorem ipsum dolor...</p></div>
+					<div class="card"><h3 class="title">Card title</h3><div class="subtitle">Subtitle</div><p>Lorem ipsum dolor...</p></div>
+				</div>
+				<div class="preview"><div class="img"></div></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="subscribe" style="--name: --subscribe-s;">
+		<div class="subscribe">
+			<h2>Subscribe now</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+			<form action="">
+				<input type="email" placeholder="Enter your email" />
+				<button class="btn" type="submit"><span>Subscribe</span></button>
+			</form>
+		</div>
+	</section>
+
+	<div class="scroll"><span>scroll</span><div class="divider"></div><span>down</span></div>
+</main>
+
+<footer>
+	<a href="https://twitter.com/intent/follow?screen_name=andrejsharapov" target="_blank"><span>X</span></a>
+</footer>
+
+
+<!-- start cards script -->
+<script>
+    // Select all cards
+const cards = gsap.utils.toArray(".c-card");
+const lastCardIndex = cards.length - 1;
+
+// ScrollTriggers
+const firstCardST = ScrollTrigger.create({
+  trigger: cards[1],
+  start: "center center"
+});
+
+const lastCardST = ScrollTrigger.create({
+  trigger: cards[cards.length - 1],
+  start: "center center"
+});
+
+// Animation
+cards.forEach((card, index) => {
+  const scale = index === lastCardIndex ? 1 : 0.5;
+  const scaleDown = gsap.to(card, { scale: scale });
+
+  ScrollTrigger.create({
+    trigger: card,
+    start: "top top",
+    end: () => lastCardST.start,
+    pin: true,
+    pinSpacing: false,
+    scrub: 0.5,
+    ease: "none",
+    animation: scaleDown,
+    toggleActions: "restart none none reverse"
+  });
+});
+
+</script>
+<!-- ends cards script -->
+
+<!-- text animation in about us -->
+<!-- <script>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".about-animate", {
+	opacity: 1,
+	translateY: 0,
+	scale: 1,
+	duration: 1,
+	ease: "power2.out",
+	scrollTrigger: {
+		trigger: ".about-animate",
+		start: "top 85%",
+		toggleActions: "play none none reverse"
+	}
+});
+</script> -->
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".about-animate", 
+	{ opacity: 0, y: 60, scale: 0.95 },
+	{ 
+		opacity: 1,
+		y: 0,
+		scale: 1,
+		duration: 1.6,
+		ease: "elastic.out(1, 0.45)",
+		scrollTrigger: {
+			trigger: ".about-animate",
+			start: "top 85%",
+			toggleActions: "play none none reverse"
+		}
+	}
+);
+</script>
+
+</body>
+</html>
