@@ -37,24 +37,25 @@ body {
 		--subscribe-s;
 }
 
+
+
 header {
 	--show: none;
 	--position: relative;
 	--b: 0;
 	--s: 10%;
-	--nav-bg: var(--yellow);
+	--nav-bg: #0ac385; /* solid */
 
 	position: sticky;
 	top: 0;
-	z-index: 2;
+	z-index: 9999;
 	inline-size: 100%;
+	background: #ffffff !important;      /* remove transparency */
+	backdrop-filter: none !important;     /* remove blur */
+	-webkit-backdrop-filter: none !important;
 	transition: all 200ms linear;
-    box-shadow: 0 4px 10px rgba(10, 195, 133, 0.35); /* mint green shadow */
+	box-shadow: 0 4px 10px rgba(10, 195, 133, 0.35);
 
-	/* animation */
-	animation: height-resize both linear;
-	animation-timeline: scroll();
-	animation-range: entry 0% exit 20%;
 
 	.menu {
 		position: fixed;
@@ -117,9 +118,7 @@ header {
 		align-items: center;
 		justify-content: center;
 
-		/* blur background */
-		background-color: var(--header-bg);
-		backdrop-filter: blur(6px);
+		
 
 		& ul {
 			list-style-type: none;
@@ -201,9 +200,11 @@ header {
 	}
 }
 
+/* form and contact us heading  */
 :is(h1, h2) {
 	margin: 0;
 	font-size: calc(2rem + 0.25vw);
+	color:#497d6b;
 }
 
 a {
@@ -215,9 +216,9 @@ a {
 	anchor-name: var(--an);
 	animation-timeline: var(--at);
 
-	&:not(:hover) {
-		opacity: calc(0.5 + var(--active, 0));
-	}
+	/* &:not(:hover) {
+		opacity: calc(0.9 + var(--active, 0));
+	} */
 }
 
 section {
@@ -312,7 +313,7 @@ section {
 	}
 	h1 {
     display: block;
-    font-size: 2em;
+    font-size: 4em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
@@ -550,9 +551,9 @@ section {
 					--range-start: 70%;
 				}
 
-				&:not(:last-of-type) {
+				/* &:not(:last-of-type) {
 					margin-block-end: 2rem;
-				}
+				} */
 
 				& * {
 					margin: 0;
@@ -561,6 +562,7 @@ section {
 
 				.title {
 					padding-block-start: 1rem;
+					color:#61c6a4;
 				}
 
 				.subtitle {
@@ -635,6 +637,7 @@ section {
 	display: grid;
 	place-content: center;
 	text-align: center;
+	box-shadow: 0 8px 60px rgba(10, 195, 133, 0.22);
 
 	& form {
 		position: relative;
@@ -652,19 +655,72 @@ section {
 			margin-block-end: 1rem;
 			padding-inline: 0.5rem;
 			font-size: calc(1rem + 0.25vw);
-			box-shadow: 0 0 0.125rem var(--text-color);
+			box-shadow: 0 0 0.125rem var(--mint-dark);
 
 			&:focus {
 				outline: thin solid var(--blue);
 			}
 		}
 
-		& button {
+		& input,
+& textarea {
+    inline-size: 100%;
+    min-block-size: 3rem;
+    margin-block-end: 1rem;
+    padding-inline: 0.75rem;
+    font-size: calc(1rem + 0.25vw);
+
+    /* 👇 FIX */
+    color: #003225;                   /* Visible text color */
+    background-color: #ffffff;        /* White input background */
+    border: 1.5px solid var(--mint-dark);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.125rem var(--mint-dark);
+    outline: none;
+}
+
+& input::placeholder,
+& textarea::placeholder {
+    color: #5b6b65;    /* Soft placeholder visibility */
+}
+
+& input:focus,
+& textarea:focus {
+    outline: 2px solid var(--blue);
+}
+
+
+		/* & button {
 			padding: 0.75rem 1rem;
 			text-transform: uppercase;
 			cursor: pointer;
 			background-color: var(--blue);
 			border: 0;
+			border-radius: 2rem;
+} */
+
+& button {
+	padding: 0.9rem 2rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color:#0ac385; /* keep your original color */
+	border: 0;
+	border-radius: 0.5rem;
+	/* color: #ffffff;                  */
+	font-weight: 700;
+	font-size: 0.95rem;
+	letter-spacing: 0.5px;
+	transition: all 0.25s ease;
+	width: 100%;
+}
+
+& button:hover {
+	/* background-color: #0ac385;     
+	color: #ffffff;                 */
+	background: var(--mint-dark);
+	border-color: var(--mint);
+	transform: scale(1.05);
+}
 
 			&:focus {
 				outline: thin solid var(--blue);
@@ -675,8 +731,9 @@ section {
 				filter: invert(100%);
 			}
 		}
+
 	}
-}
+
 
 @keyframes slide-up {
 	from {
@@ -777,7 +834,7 @@ footer {
 }
 
 
-/* ========== Start ABOUT3 INTRO ABOVE TILES ========== */
+/* ==========End ABOUT3 INTRO ABOVE TILES ========== */
 
 
 /* start navbar logo and button */
@@ -792,15 +849,18 @@ footer {
 	z-index: 5;
 	display: flex;
 	align-items: center;
+	backdrop-filter: none !important;
+	
 }
-
 
 
 .nav-logo img {
     height: 48px;
     width: auto;
+	filter: none !important;
     /* filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3)); */
     cursor: pointer;
+
 }
 .nav-btn {
 	position: fixed;
@@ -809,19 +869,21 @@ footer {
     top: 1.4rem;
 	right: 0.75rem;
 	z-index: 6;
+	
 }
 
 .nav-btn a {
 	background: var(--mint);
 	color: white;
 	padding: 0.45rem 1.2rem; /* reduced height */
-	border-radius: 999px;
+	border-radius: 0.5rem;
 	text-transform: uppercase;
 	font-size: 0.85rem;
 	font-weight: 600;
 	border: 2px solid var(--mint-dark);
 	transition: 0.3s ease;
 }
+
 
 
 /* .nav-btn {
@@ -970,14 +1032,14 @@ footer {
 #masthead {
   position: relative;
   overflow: hidden;
-  padding: 80px 20px;
+  padding: 50px 20px;
 }
 
 /* Container holding all bubbles */
 .chat-bubbles {
   position: absolute;
   inset: 0;
-  pointer-events: none; /* so clicks go through */
+  pointer-events: none;
 }
 
 /* Base bubble */
@@ -991,63 +1053,42 @@ footer {
   background: #ffffff;
   border: 1px solid #ddd;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  animation: floatUp 12s linear infinite;
+  animation: floatDown 12s linear infinite;
   opacity: 0.9;
 }
 
-/* Left side bubbles */
+/* Left Bubble */
 .bubble--left {
   background: #f3f7ff;
   border-color: #c7d6ff;
 }
-
 .bubble--left::after {
   content: "";
   position: absolute;
   left: 10px;
-  bottom: -8px;
-  border-width: 8px 8px 0 0;
+  top: -8px;
+  border-width: 0 8px 8px 0;
   border-style: solid;
-  border-color: #f3f7ff transparent transparent transparent;
+  border-color: transparent #f3f7ff #f3f7ff transparent;
 }
 
-/* Right side bubbles */
+/* Right Bubble */
 .bubble--right {
   background: #e7fff5;
   border-color: #b7f0d4;
 }
-
 .bubble--right::after {
   content: "";
   position: absolute;
   right: 10px;
-  bottom: -8px;
-  border-width: 8px 0 0 8px;
+  top: -8px;
+  border-width: 0 0 8px 8px;
   border-style: solid;
-  border-color: #e7fff5 transparent transparent #e7fff5;
+  border-color: transparent transparent #e7fff5 #e7fff5;
 }
 
-/* Individual positions + delays to make them feel random */
-.chat-bubbles .bubble:nth-child(1) {
-  left: 10%;
-  bottom: -40px;
-  animation-delay: 0s;
-}
-
-.chat-bubbles .bubble:nth-child(2) {
-  right: 12%;
-  bottom: -70px;
-  animation-delay: 3s;
-}
-
-.chat-bubbles .bubble:nth-child(3) {
-  left: 55%;
-  bottom: -100px;
-  animation-delay: 6s;
-}
-
-/* Floating animation */
-@keyframes floatUp {
+/* Floating Top to Bottom */
+@keyframes floatDown {
   0% {
     transform: translateY(0) translateX(0);
     opacity: 0;
@@ -1056,48 +1097,258 @@ footer {
     opacity: 1;
   }
   50% {
-    transform: translateY(-180px) translateX(-10px);
+    transform: translateY(180px) translateX(10px);
   }
   100% {
-    transform: translateY(-320px) translateX(10px);
+    transform: translateY(320px) translateX(-10px);
     opacity: 0;
   }
 }
 
-/* Make sure main masthead content stays above bubbles */
-.masthead {
-  position: relative;
-  z-index: 8;
-  text-align: center;
-}
-
+/* Hover Stop + Highlight */
 .chat-bubbles .bubble:hover {
-	cursor: pointer;
-	transform: scale(1.08);
-	animation-play-state: paused; /* stop floating */
-	border-color: #55e41b; /* brighter border */
-	box-shadow: 0 1vw 2.2vw rgba(0, 0, 0, 0.15);
-	opacity: 1;
+  cursor: pointer;
+  transform: scale(1.08);
+  animation-play-state: paused;
+  border-color: #55e41b;
+  box-shadow: 0 1vw 2.2vw rgba(0, 0, 0, 0.15);
+  opacity: 1;
 }
-
-/* For smooth interactions */
-.chat-bubbles .bubble {
-	transition: 
-		transform 0.25s ease,
-		box-shadow 0.25s ease,
-		border-color 0.25s ease,
-		opacity 0.25s ease;
-}
-
 
 .chat-bubbles .bubble:hover::after {
-	border-top-color: #55e41b;
+  border-bottom-color: #55e41b;
+  border-right-color: #55e41b;
+}
+
+/* Smooth Hover Animations */
+.chat-bubbles .bubble {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+}
+
+/* Random Bubble Positions (from TOP) */
+.chat-bubbles .bubble:nth-child(1) { left: 10%; top: -40px; animation-delay: 0s; }
+.chat-bubbles .bubble:nth-child(2) { right: 12%; top: -70px; animation-delay: 2s; }
+.chat-bubbles .bubble:nth-child(3) { left: 50%; top: -90px; animation-delay: 4s; }
+.chat-bubbles .bubble:nth-child(4) { right: 8%;  top: -60px; animation-delay: 6s; }
+.chat-bubbles .bubble:nth-child(5) { left: 22%; top: -110px; animation-delay: 8s; }
+.chat-bubbles .bubble:nth-child(6) { right: 45%; top: -130px; animation-delay: 1s; }
+.chat-bubbles .bubble:nth-child(7) { left: 75%; top: -100px; animation-delay: 3s; }
+.chat-bubbles .bubble:nth-child(8) { right: 30%; top: -150px; animation-delay: 5s; }
+.chat-bubbles .bubble:nth-child(9) { left: 30%; top: -80px;  animation-delay: 7s; }
+.chat-bubbles .bubble:nth-child(10){ right: 60%; top: -120px; animation-delay: 9s; }
+
+/* FOOTER CSS */
+
+/* 🌿 Stylish Footer */
+footer {
+	background-color: #0AC385;
+	/* color: #ffffff; */
+	text-align: center;
+	padding: 1.2rem 1rem;
+	margin-top: 0;
+	position: relative;
+	overflow: hidden;
+	font-family: "Outfit", sans-serif;
+}
+
+/* Hover Social Button */
+footer a {
+	display: inline-block;
+	background: #0AC385;
+	/* color: #ffffff; */
+	font-weight: 600;
+	padding: 0.4rem 1rem;
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	transition: 0.3s ease;
+}
+
+footer a:hover {
+	background: #ffffff; /* mint dark */
+	color: #49eeb7;
+	transform: scale(1.08);
+}
+
+/* Subtle Shine Animation */
+footer::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 40%;
+	height: 100%;
+	background: rgba(255,255,255,0.25);
+	transform: skewX(-20deg);
+	animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+	0% { left: -100%; }
+	100% { left: 150%; }
 }
 
 
-/* swipe card text css */
-
-.c-card__title {
-    font-size: 36px;
-    color: #61c6a4;
+/* ===== FIX NAVBAR TRANSPARENT & REMOVE BLUR ===== */
+header {
+    background: #FFFFFF !important;         /* solid white navbar */
+    backdrop-filter: none !important;       /* REMOVE blur fully */
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 4px 10px rgba(10,195,133,0.25);
 }
+
+/* keep nav background on mobile */
+@media (max-width: 768px) {
+    header nav {
+        background: #FFFFFF !important;
+        backdrop-filter: none !important;
+    }
+}
+
+/* ===== FIX MENU NOT CLICKING WHILE SCROLL ===== */
+header, nav, .menu, .nav-btn, .nav-logo {
+    pointer-events: auto !important;
+    z-index: 1000 !important;  /* ensure menu stays clickable */
+}
+
+/* full-page mobile nav click fix */
+@media (max-width: 768px) {
+    nav {
+        pointer-events: auto !important;
+    }
+    body:has(#burger:checked) {
+        overflow: hidden;  /* prevent background scroll */
+    }
+}
+
+/* 3d animation in the place of columns scrolling horizontally */
+
+/* 
+body {
+    background: linear-gradient(135deg, #ffffff 0%, #ecfff6 40%, #d9ffef 100%);
+    background-attachment: fixed;
+    color: #00111A;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+header, footer, .subscribe, .contact-card, .two-columns .cards .card,
+.c-card, .nav-btn a, .navbar1 ul li a {
+    background: #ffffff;
+}
+
+.subscribe, .contact-card, .two-columns .cards .card, .c-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+} */
+
+/* vision and mission css */
+/* 🌿 OUR VALUES SECTION */
+.our-values {
+    padding-top: 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.values-heading {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--mint-dark);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 📌 Card Layout */
+.values-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* 💎 Individual Card */
+.value-card {
+    flex: 1 1 320px;
+    background: #FFFFFF;
+    border: 2px solid var(--mint-soft);
+    border-radius: 1rem;
+    padding: 1.8rem;
+    box-shadow: 0 8px 20px rgba(10, 195, 133, 0.13);
+    transition: 0.25s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(10, 195, 133, 0.2);
+    border-color: var(--mint);
+}
+
+.value-card h3 {
+    color: var(--mint-dark);
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.value-card p {
+    color: #003225;
+    font-size: 0.98rem;
+    line-height: 1.55rem;
+    opacity: 0.85;
+}
+
+
+
+/* 🏆 Introducing Texto Styling */
+.texto-intro {
+	max-width: 800px;
+	margin: 2.5rem auto 3.5rem;
+	padding: 1.5rem 1.4rem;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.6);
+	border: 2px solid var(--mint-soft);
+	border-radius: 1rem;
+	box-shadow: 0 8px 22px rgba(10,195,133,0.08);
+	backdrop-filter: blur(6px);
+	transition: 0.35s ease;
+}
+
+.texto-intro:hover {
+	box-shadow: 0 10px 28px rgba(10,195,133,0.15);
+	transform: translateY(-4px);
+	border-color: var(--mint);
+}
+
+.texto-title {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--mint-dark);
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.texto-desc {
+	font-family: "Outfit", sans-serif;
+	color: #003225;
+	font-size: 1rem;
+	line-height: 1.55;
+	opacity: 0.92;
+	margin-bottom: 1rem;
+}
+
+.texto-desc.bottom {
+	margin-top: 0.6rem;
+}
+
+.texto-author {
+	font-size: 1.05rem;
+	color: var(--mint);
+	margin-bottom: 1.2rem;
+	font-weight: 700;
+}
+
